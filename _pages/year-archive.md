@@ -2,6 +2,7 @@
 title: "Great History"
 permalink: /Great-History/
 layout: single
+custom_sidebar: true
 sidebar:
   - title: "Page 1 Sidebar"
     text: "This is custom sidebar content for Page 1."

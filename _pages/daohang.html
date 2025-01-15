@@ -1,0 +1,199 @@
+---
+title: "daohang"
+permalink: /daohang/
+---
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>自定义导航 - Cloudflare Workers Dir</title>
+    <link href="https://cdn.jsdelivr.net/npm/semantic-ui-css@2.4.1/semantic.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/sleepwood/cf-worker-dir@0.1.1/style.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui-css@2.4.1/semantic.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <div id="head" class="ui inverted vertical masthead center aligned segment">
+            <div id="nav" class="ui container">
+                <div class="ui large secondary inverted menu">
+                    <div class="item">
+                        <p id="hitokoto">条条大路通罗马</p>
+                    </div>
+                </div>
+            </div>
+            <div id="title" class="ui text container">
+                <h1 class="ui inverted header">
+                    <i class="sitemap icon"></i>
+                    <div class="content">自定义导航
+                        <div class="sub header">Cloudflare Workers Dir</div>
+                    </div>
+                </h1>
+                <div class="ui left corner labeled right icon fluid large input">
+                    <div class="ui left corner label">
+                        <img id="search-fav" class="left floated avatar ui image"
+                            src="https://www.baidu.com/favicon.ico">
+                    </div>
+                    <input id="searchinput" type="search" placeholder="搜索你想要知道的……" autocomplete="off">
+                    <i class="inverted circular search link icon"></i>
+                </div>
+                <div id="sengine" class="ui bottom attached tabular inverted secondary menu">
+                    <div class="header item">&nbsp;</div>
+                    <a class="active item" data-url="https://www.baidu.com/s?wd=$s">百 度</a>
+                    <a class="item" data-url="https://www.google.com/search?q=$s">谷 歌</a>
+                    <a class="item" data-url="https://www.bing.com/search?q=$s">必 应</a>
+                    <a class="item" data-url="https://www.sogou.com/web?query=$s">搜 狗</a>
+                </div>
+                <div>
+                    <a id="menubtn" class="red ui icon inverted button"><i class="heart icon"></i> 喜欢此域名 </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="ui container">
+            <!-- 技术 Section -->
+            <div class="ui basic segment">
+                <h4 class="ui horizontal divider header">
+                    <i class="code icon"></i>技术
+                </h4>
+                <div class="ui four stackable cards">
+                    <a class="card" href="https://oschina.net/" target="_blank">
+                        <div class="content">
+                            <img class="left floated avatar ui image" src="https://icons.duckduckgo.com/ip3/oschina.net.ico">
+                            <div class="header">开源中国</div>
+                            <div class="meta">程序员集散地</div>
+                        </div>
+                    </a>
+                    <a class="card" href="https://v2ex.com" target="_blank">
+                        <div class="content">
+                            <img class="left floated avatar ui image" src="https://icons.duckduckgo.com/ip3/v2ex.com.ico">
+                            <div class="header">V2EX</div>
+                            <div class="meta">程序员集散地</div>
+                        </div>
+                    </a>
+                    <a class="card" href="https://csdn.net/" target="_blank">
+                        <div class="content">
+                            <img class="left floated avatar ui image" src="https://icons.duckduckgo.com/ip3/csdn.net.ico">
+                            <div class="header">CSDN技术社区</div>
+                            <div class="meta">程序员集散地</div>
+                        </div>
+                    </a>
+                    <a class="card" href="https://github.com/" target="_blank">
+                        <div class="content">
+                            <img class="left floated avatar ui image" src="https://icons.duckduckgo.com/ip3/github.com.ico">
+                            <div class="header">Github</div>
+                            <div class="meta">程序员集散地</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <!-- 许文杰 Section -->
+            <div class="ui basic segment">
+                <h4 class="ui horizontal divider header">
+                    <i class="code icon"></i>许文杰
+                </h4>
+                <div class="ui four stackable cards">
+                    <a class="card" href="https://oschina.net/" target="_blank">
+                        <div class="content">
+                            <img class="left floated avatar ui image" src="https://icons.duckduckgo.com/ip3/oschina.net.ico">
+                            <div class="header">开源中国</div>
+                            <div class="meta">程序员集散地</div>
+                        </div>
+                    </a>
+                    <a class="card" href="https://v2ex.com" target="_blank">
+                        <div class="content">
+                            <img class="left floated avatar ui image" src="https://icons.duckduckgo.com/ip3/v2ex.com.ico">
+                            <div class="header">V2EX</div>
+                            <div class="meta">程序员集散地</div>
+                        </div>
+                    </a>
+                    <a class="card" href="https://csdn.net/" target="_blank">
+                        <div class="content">
+                            <img class="left floated avatar ui image" src="https://icons.duckduckgo.com/ip3/csdn.net.ico">
+                            <div class="header">CSDN技术社区</div>
+                            <div class="meta">程序员集散地</div>
+                        </div>
+                    </a>
+                    <a class="card" href="https://github.com/" target="_blank">
+                        <div class="content">
+                            <img class="left floated avatar ui image" src="https://icons.duckduckgo.com/ip3/github.com.ico">
+                            <div class="header">Github</div>
+                            <div class="meta">程序员集散地</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <!-- 学习 Section -->
+            <div class="ui basic segment">
+                <h4 class="ui horizontal divider header">
+                    <i class="graduation cap icon"></i>学习
+                </h4>
+                <div class="ui four stackable cards">
+                    <a class="card" href="https://w3school.com.cn/" target="_blank">
+                        <div class="content">
+                            <img class="left floated avatar ui image" src="https://icons.duckduckgo.com/ip3/w3school.com.cn.ico">
+                            <div class="header">W3school在线教程</div>
+                            <div class="meta">程序员集散地</div>
+                        </div>
+                    </a>
+                    <a class="card" href="https://runoob.com/" target="_blank">
+                        <div class="content">
+                            <img class="left floated avatar ui image" src="https://icons.duckduckgo.com/ip3/runoob.com.ico">
+                            <div class="header">菜鸟教程</div>
+                            <div class="meta">程序员集散地</div>
+                        </div>
+                    </a>
+                    <a class="card" href="https://segmentfault.com/" target="_blank">
+                        <div class="content">
+                            <img class="left floated avatar ui image" src="https://icons.duckduckgo.com/ip3/segmentfault.com.ico">
+                            <div class="header">思否社区</div>
+                            <div class="meta">程序员集散地</div>
+                        </div>
+                    </a>
+                    <a class="card" href="https://jianshu.com/" target="_blank">
+                        <div class="content">
+                            <img class="left floated avatar ui image" src="https://icons.duckduckgo.com/ip3/jianshu.com.ico">
+                            <div class="header">简书</div>
+                            <div class="meta">程序员集散地</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer">
+            Powered by <a class="ui label" href="https://github.com/sleepwood/cf-worker-dir" target="_blank"><i
+                    class="github icon"></i> Cf-Worker-Dir</a> &copy; Base on <a class="ui label"><i
+                    class="balance scale icon"></i> MIT License</a>
+        </div>
+    </footer>
+    <script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
+    <script>
+        $('#sengine a').on('click', function (e) {
+            $('#sengine a.active').toggleClass('active');
+            $(e.target).toggleClass('active');
+            $('#search-fav').attr('src', $(e.target).data('url').match(/^https?:\/\/\S+\//)[0] + '/favicon.ico');
+        });
+        $('.search').on('click', function () {
+            var url = $('#sengine a.active').data('url');
+            url = url.replace('$s', $('#searchinput').val());
+            window.open(url);
+        });
+        $("#searchinput").bind("keypress", function () {
+            if (event.keyCode == 13) {
+                $(".search").click();
+            }
+        });
+        $('#menubtn').on('click', function () {
+            $('#seller').modal('show');
+        });
+    </script>
+</body>
+
+</html>
