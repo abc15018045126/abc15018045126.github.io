@@ -7,3 +7,21 @@ search: false
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
+
+/* Custom Sidebar Styles */
+
+.sidebar-nav,
+.sidebar-subnav {
+  list-style-type: none;
+}
+.sidebar-nav > li > a,
+.sidebar-subnav > li > a {
+  text-decoration: none;/* Don't underline */
+
+  color: black; /* Sets text color to black */
+  font-size: 1rem; /* Makes the text larger */
+
+  &:hover {
+    color: #007bff;//Blue on hover
+  }
+}
