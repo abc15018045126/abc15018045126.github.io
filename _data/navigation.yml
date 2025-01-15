@@ -6,6 +6,8 @@ main:
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   # - title: "Sample Posts"
   #   url: /year-archive/
+  - title: "daohang"
+    url: /daohang/
   - title: "year-archive"
     url: /year-archive/
   - title: "Sample Collections"
@@ -14,5 +16,3 @@ main:
     url: /tags/
   - title: "Great History"
     url: /Great-History/
-  - title: "daohang"
-    url: /daohang/
